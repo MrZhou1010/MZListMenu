@@ -34,10 +34,10 @@
         [self addSubview:self.contentView];
         self.contentView.frame = frame;
         self.isDown = YES;
-        self.layer.shadowRadius = 2;
+        self.layer.shadowRadius = 2.0;
         self.layer.shadowColor = [UIColor blackColor].CGColor;
-        self.layer.shadowOpacity = 1;
-        self.layer.shadowOffset = CGSizeMake(1, 1);
+        self.layer.shadowOpacity = 1.0;
+        self.layer.shadowOffset = CGSizeMake(1.0, 1.0);
     }
     return self;
 }
@@ -85,11 +85,11 @@
     [self.configuration.menuViewBackgroundColor set];
     [trianglePath fill];
     if (self.isDown) {
-        UIBezierPath *radiusPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, self.configuration.menuTriangleHeight, contentWidth, contentHeight - self.configuration.menuTriangleHeight) cornerRadius:5];
+        UIBezierPath *radiusPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, self.configuration.menuTriangleHeight, contentWidth, contentHeight - self.configuration.menuTriangleHeight) cornerRadius:5.0];
         [self.configuration.menuViewBackgroundColor set];
         [radiusPath fill];
     } else {
-        UIBezierPath *radiusPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, contentWidth, contentHeight - self.configuration.menuTriangleHeight) cornerRadius:5];
+        UIBezierPath *radiusPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, contentWidth, contentHeight - self.configuration.menuTriangleHeight) cornerRadius:5.0];
         [self.configuration.menuViewBackgroundColor set];
         [radiusPath fill];
     }
@@ -117,7 +117,7 @@
                 CALayer *lineLayer = [[CALayer alloc] init];
                 lineLayer.cornerRadius = 0.5;
                 lineLayer.backgroundColor = self.configuration.menuViewLineColor.CGColor;
-                lineLayer.frame = CGRectMake(self.configuration.menuItemHeight * 0.25 - 2, i * self.configuration.menuItemHeight + self.configuration.menuTriangleHeight - 1, self.configuration.menuItemWidth - self.configuration.menuItemHeight * 0.5 + 4, 0.5);
+                lineLayer.frame = CGRectMake(self.configuration.menuItemHeight * 0.25 - 2.0, i * self.configuration.menuItemHeight + self.configuration.menuTriangleHeight - 1.0, self.configuration.menuItemWidth - self.configuration.menuItemHeight * 0.5 + 4.0, 0.5);
                 [self.contentView.layer addSublayer:lineLayer];
             }
         } else {
@@ -128,7 +128,7 @@
                 CALayer *lineLayer = [[CALayer alloc] init];
                 lineLayer.cornerRadius = 0.5;
                 lineLayer.backgroundColor = self.configuration.menuViewLineColor.CGColor;
-                lineLayer.frame = CGRectMake(self.configuration.menuItemHeight * 0.25 - 2, i * self.configuration.menuItemHeight - 1, self.configuration.menuItemWidth - self.configuration.menuItemHeight * 0.5 + 4, 0.5);
+                lineLayer.frame = CGRectMake(self.configuration.menuItemHeight * 0.25 - 2.0, i * self.configuration.menuItemHeight - 1.0, self.configuration.menuItemWidth - self.configuration.menuItemHeight * 0.5 + 4.0, 0.5);
                 [self.contentView.layer addSublayer:lineLayer];
             }
         }
@@ -136,7 +136,7 @@
         [itemBtn setBackgroundImage:buttonHighlightedImage forState:UIControlStateHighlighted];
         // 上下两边的圆角
         if (i == 0 || i == self.titleArr.count - 1) {
-            itemBtn.layer.cornerRadius = 5;
+            itemBtn.layer.cornerRadius = 5.0;
             itemBtn.layer.masksToBounds = YES;
         }
     }

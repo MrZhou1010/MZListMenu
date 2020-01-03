@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIView (MZListMenu)
 
 /**
+ * 显示视图
+ *
  * @param imageArr 图片数组
  * @param titleArr 标题数组
  * @param configuration 配置

@@ -14,10 +14,10 @@
     if (self = [super init]) {
         self.menuViewBackgroundColor = [UIColor colorWithWhite:0.4 alpha:1.0];
         self.menuViewLineColor = [UIColor colorWithWhite:0.7 alpha:1.0];
-        self.menuTriangleWidth = 16;
-        self.menuTriangleHeight = 10;
-        self.menuItemWidth = 120;
-        self.menuItemHeight = 45;
+        self.menuTriangleWidth = 16.0;
+        self.menuTriangleHeight = 10.0;
+        self.menuItemWidth = 120.0;
+        self.menuItemHeight = 45.0;
         self.menuItemTitleColor = [UIColor whiteColor];;
         self.menuItemTitleFont = [UIFont systemFontOfSize:16.0];
         self.menuType = MZListMenuTypeRightNavBar;

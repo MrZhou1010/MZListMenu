@@ -120,13 +120,13 @@
     CGFloat menuHeight = self.configuration.menuItemHeight * count + self.configuration.menuTriangleHeight;
     switch (self.configuration.menuType) {
         case MZListMenuTypeLeftNavBar: {
-            self.menuStartRect = CGRectMake(10 + menuWidth * 0.25, statusBarHeight + navigationBarHeight, 1, 1);
-            self.menuEndRect = CGRectMake(10, statusBarHeight + navigationBarHeight, menuWidth, menuHeight);
+            self.menuStartRect = CGRectMake(10.0 + menuWidth * 0.25, statusBarHeight + navigationBarHeight, 1.0, 1.0);
+            self.menuEndRect = CGRectMake(10.0, statusBarHeight + navigationBarHeight, menuWidth, menuHeight);
         }
             break;
         case MZListMenuTypeRightNavBar: {
-            self.menuStartRect = CGRectMake(MZListMenuScreenWidth - menuWidth * 0.25 - 10, statusBarHeight + navigationBarHeight, 1, 1);
-            self.menuEndRect = CGRectMake(MZListMenuScreenWidth - menuWidth - 10, statusBarHeight + navigationBarHeight, menuWidth, menuHeight);
+            self.menuStartRect = CGRectMake(MZListMenuScreenWidth - menuWidth * 0.25 - 10.0, statusBarHeight + navigationBarHeight, 1.0, 1.0);
+            self.menuEndRect = CGRectMake(MZListMenuScreenWidth - menuWidth - 10.0, statusBarHeight + navigationBarHeight, menuWidth, menuHeight);
         }
             break;
         default:
@@ -150,41 +150,41 @@
     switch (self.configuration.menuType) {
         case MZListMenuTypeLeftNormal: {
             if (self.isDown) {
-                self.menuStartRect = CGRectMake(midX, maxY, 1, 1);
-                self.menuEndRect = CGRectMake(midX - menuWidth * 0.25, maxY + 2, menuWidth, menuHeight);
+                self.menuStartRect = CGRectMake(midX, maxY, 1.0, 1.0);
+                self.menuEndRect = CGRectMake(midX - menuWidth * 0.25, maxY + 2.0, menuWidth, menuHeight);
             } else {
-                self.menuStartRect = CGRectMake(midX, minY, 1, 1);
-                self.menuEndRect = CGRectMake(midX - menuWidth * 0.25, minY - 2 - menuHeight, menuWidth, menuHeight);
+                self.menuStartRect = CGRectMake(midX, minY, 1.0, 1.0);
+                self.menuEndRect = CGRectMake(midX - menuWidth * 0.25, minY - 2.0 - menuHeight, menuWidth, menuHeight);
             }
         }
             break;
         case MZListMenuTypeRightNormal: {
             if (self.isDown) {
-                self.menuStartRect = CGRectMake(midX, maxY, 1, 1);
-                self.menuEndRect = CGRectMake(midX - menuWidth * 0.75, maxY + 2, menuWidth, menuHeight);
+                self.menuStartRect = CGRectMake(midX, maxY, 1.0, 1.0);
+                self.menuEndRect = CGRectMake(midX - menuWidth * 0.75, maxY + 2.0, menuWidth, menuHeight);
             } else {
-                self.menuStartRect = CGRectMake(midX, minY, 1, 1);
-                self.menuEndRect = CGRectMake(midX - menuWidth * 0.75, minY - 2 - menuHeight, menuWidth, menuHeight);
+                self.menuStartRect = CGRectMake(midX, minY, 1.0, 1.0);
+                self.menuEndRect = CGRectMake(midX - menuWidth * 0.75, minY - 2.0 - menuHeight, menuWidth, menuHeight);
             }
         }
             break;
         case MZListMenuTypeMidNormal: {
             if (self.isDown) {
-                self.menuStartRect = CGRectMake(midX, maxY, 1, 1);
-                self.menuEndRect = CGRectMake(midX - menuWidth * 0.5, maxY + 2, menuWidth, menuHeight);
+                self.menuStartRect = CGRectMake(midX, maxY, 1.0, 1.0);
+                self.menuEndRect = CGRectMake(midX - menuWidth * 0.5, maxY + 2.0, menuWidth, menuHeight);
             } else {
-                self.menuStartRect = CGRectMake(midX, minY, 1, 1);
-                self.menuEndRect = CGRectMake(midX - menuWidth * 0.5, minY - 2 - menuHeight, menuWidth, menuHeight);
+                self.menuStartRect = CGRectMake(midX, minY, 1.0, 1.0);
+                self.menuEndRect = CGRectMake(midX - menuWidth * 0.5, minY - 2.0 - menuHeight, menuWidth, menuHeight);
             }
         }
             break;
         default: {
             if (self.isDown) {
-                self.menuStartRect = CGRectMake(midX, maxY, 1, 1);
-                self.menuEndRect = CGRectMake(midX - menuWidth * 0.5, maxY + 2, menuWidth, menuHeight);
+                self.menuStartRect = CGRectMake(midX, maxY, 1.0, 1.0);
+                self.menuEndRect = CGRectMake(midX - menuWidth * 0.5, maxY + 2.0, menuWidth, menuHeight);
             } else {
-                self.menuStartRect = CGRectMake(midX, minY, 1, 1);
-                self.menuEndRect = CGRectMake(midX - menuWidth * 0.5, minY - 2 - menuHeight, menuWidth, menuHeight);
+                self.menuStartRect = CGRectMake(midX, minY, 1.0, 1.0);
+                self.menuEndRect = CGRectMake(midX - menuWidth * 0.5, minY - 2.0 - menuHeight, menuWidth, menuHeight);
             }
         }
             break;

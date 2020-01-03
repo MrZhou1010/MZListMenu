@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIBarButtonItem (MZListMenu)
 
 /**
+ * 显示视图
+ *
  * @param imageArr 图片数组
  * @param titleArr 标题数组
  * @param currentNav BarButtonItem所在的Navigation

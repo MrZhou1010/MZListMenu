@@ -13,22 +13,25 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MZListMenuItem : UIView
 
 /**
- *  初始化
- *  @param iconName 图标
- *  @param title 标题
+ * 初始化
+ *
+ * @param iconName 图标
+ * @param title 标题
  */
 - (instancetype)initWithIconName:(NSString *)iconName title:(NSString *)title;
 
 /**
- *  设置Frame
- *  @param rect 布局
+ * 设置Frame
+ *
+ * @param rect 布局
  */
 - (void)setupViewsWithRect:(CGRect)rect;
 
 /**
- *  修改文字颜色和大小
- *  @param color 文字颜色
- *  @param font 文字大小
+ * 修改文字颜色和大小
+ *
+ * @param color 文字颜色
+ * @param font 文字大小
  */
 - (void)updateTitleColor:(UIColor *)color font:(UIFont *)font;
 

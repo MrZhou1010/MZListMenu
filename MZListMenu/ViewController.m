@@ -71,9 +71,9 @@
     UIButton *btn = (UIButton *)sender;
     if (btn.tag == 11) {
         NSArray *imageArr = @[@"icon_swap", @"icon_photograph", @"icon_code"];
-        NSArray *titleArr = @[@"扫一扫", @"拍  照", @"付款码"];
+        NSArray *titleArr = @[@"扫一扫", @"拍\t照", @"付款码"];
         [btn mz_showMenuWithImages:imageArr titles:titleArr configuration:[MZListMenuConfiguration defualt] itemClickBlock:^(NSInteger index) {
-            NSLog(@"%ld", (long)index);
+            [self showMessage:index];
         }];
     } else {
          [self.navigationController pushViewController:[[TestTableViewController alloc] init] animated:YES];
