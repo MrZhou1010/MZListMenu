@@ -120,13 +120,13 @@
     CGFloat menuHeight = self.configuration.menuItemHeight * count + self.configuration.menuTriangleHeight;
     switch (self.configuration.menuType) {
         case MZListMenuTypeLeftNavBar: {
-            self.menuStartRect = CGRectMake(10.0 + menuWidth * 0.25, statusBarHeight + navigationBarHeight, 1.0, 1.0);
-            self.menuEndRect = CGRectMake(10.0, statusBarHeight + navigationBarHeight, menuWidth, menuHeight);
+            self.menuStartRect = CGRectMake(5.0 + menuWidth * 0.25, statusBarHeight + navigationBarHeight, 1.0, 1.0);
+            self.menuEndRect = CGRectMake(5.0, statusBarHeight + navigationBarHeight, menuWidth, menuHeight);
         }
             break;
         case MZListMenuTypeRightNavBar: {
-            self.menuStartRect = CGRectMake(MZListMenuScreenWidth - menuWidth * 0.25 - 10.0, statusBarHeight + navigationBarHeight, 1.0, 1.0);
-            self.menuEndRect = CGRectMake(MZListMenuScreenWidth - menuWidth - 10.0, statusBarHeight + navigationBarHeight, menuWidth, menuHeight);
+            self.menuStartRect = CGRectMake(MZListMenuScreenWidth - menuWidth * 0.25 - 5.0, statusBarHeight + navigationBarHeight, 1.0, 1.0);
+            self.menuEndRect = CGRectMake(MZListMenuScreenWidth - menuWidth - 5.0, statusBarHeight + navigationBarHeight, menuWidth, menuHeight);
         }
             break;
         default:
@@ -146,6 +146,12 @@
     CGFloat menuHeight = self.configuration.menuItemHeight * count + self.configuration.menuTriangleHeight;
     if ((maxY + menuHeight) >= MZListMenuScreenHeight) {
         self.isDown = NO;
+    }
+    self.configuration.menuType = MZListMenuTypeMidNormal;
+    if (midX - menuWidth * 0.5 <= 0) {
+        self.configuration.menuType = MZListMenuTypeLeftNormal;
+    } else if (midX + menuWidth * 0.5 >= MZListMenuScreenWidth) {
+        self.configuration.menuType = MZListMenuTypeRightNormal;
     }
     switch (self.configuration.menuType) {
         case MZListMenuTypeLeftNormal: {
