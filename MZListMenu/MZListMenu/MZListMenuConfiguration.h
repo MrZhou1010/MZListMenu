@@ -49,7 +49,7 @@ typedef NS_ENUM(NSInteger, MZListMenuType) {
 @property (nonatomic, assign) MZListMenuType menuType;
 
 /// 单例
-+ (instancetype)defualt;
++ (instancetype)defaultConfiguration;
 
 @end
 

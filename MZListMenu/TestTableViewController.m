@@ -48,7 +48,7 @@
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     NSArray *imageArr = @[@"icon_swap", @"icon_photograph", @"icon_code"];
     NSArray *titleArr = @[@"扫一扫", @"拍\t照", @"付款码"];
-    MZListMenuConfiguration *configuration = [MZListMenuConfiguration defualt];
+    MZListMenuConfiguration *configuration = [MZListMenuConfiguration defaultConfiguration];
     configuration.menuType = MZListMenuTypeMidNormal;
     [cell mz_showMenuWithImages:imageArr titles:titleArr configuration:configuration itemClickBlock:^(NSInteger index) {
         [self showMessage:index];

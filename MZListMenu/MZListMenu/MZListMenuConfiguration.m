@@ -25,7 +25,7 @@
     return self;
 }
 
-+ (instancetype)defualt {
++ (instancetype)defaultConfiguration {
     MZListMenuConfiguration *configuration = [[MZListMenuConfiguration alloc] init];
     return configuration;
 }

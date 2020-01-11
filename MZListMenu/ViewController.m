@@ -75,7 +75,7 @@
     UIBarButtonItem *item = (UIBarButtonItem *)sender;
     NSArray *imageArr = @[@"icon_swap", @"icon_photograph", @"icon_code"];
     NSArray *titleArr = @[@"扫一扫", @"拍\t照", @"付款码"];
-    MZListMenuConfiguration *configuration = [MZListMenuConfiguration defualt];
+    MZListMenuConfiguration *configuration = [MZListMenuConfiguration defaultConfiguration];
     configuration.menuType = item.tag == 101 ? MZListMenuTypeLeftNavBar: MZListMenuTypeRightNavBar;
     [item mz_showMenuWithImages:imageArr titles:titleArr currentNav:self.navigationController configuration:configuration itemClickBlock:^(NSInteger index) {
         [self showMessage:index];
@@ -87,7 +87,7 @@
     if (btn.tag == 11) {
         NSArray *imageArr = @[@"icon_swap", @"icon_photograph", @"icon_code"];
         NSArray *titleArr = @[@"扫一扫", @"拍\t照", @"付款码"];
-        [btn mz_showMenuWithImages:imageArr titles:titleArr configuration:[MZListMenuConfiguration defualt] itemClickBlock:^(NSInteger index) {
+        [btn mz_showMenuWithImages:imageArr titles:titleArr configuration:[MZListMenuConfiguration defaultConfiguration] itemClickBlock:^(NSInteger index) {
             [self showMessage:index];
         }];
     } else {
