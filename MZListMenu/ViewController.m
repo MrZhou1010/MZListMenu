@@ -33,11 +33,9 @@
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(showMenu:)];
     leftItem.tag = 101;
     self.navigationItem.leftBarButtonItem = leftItem;
-    
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showMenu:)];
     rightItem.tag = 102;
     self.navigationItem.rightBarButtonItem = rightItem;
-    
     UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
     btn1.frame = CGRectMake(10, 120, 60, 30);
     btn1.tag = 11;
@@ -45,7 +43,6 @@
     [btn1 setTitle:@"view1" forState:UIControlStateNormal];
     [btn1 addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn1];
-    
     UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
     btn2.frame = CGRectMake(175, 120, 60, 30);
     btn2.tag = 11;
@@ -53,7 +50,6 @@
     [btn2 setTitle:@"view2" forState:UIControlStateNormal];
     [btn2 addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn2];
-    
     UIButton *btn3 = [UIButton buttonWithType:UIButtonTypeCustom];
     btn3.frame = CGRectMake(345, 120, 60, 30);
     btn3.tag = 11;
@@ -91,7 +87,7 @@
             [self showMessage:index];
         }];
     } else {
-         [self.navigationController pushViewController:[[TestTableViewController alloc] init] animated:YES];
+        [self.navigationController pushViewController:[[TestTableViewController alloc] init] animated:YES];
     }
 }
 
