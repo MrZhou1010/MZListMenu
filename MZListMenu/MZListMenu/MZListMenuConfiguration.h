@@ -21,10 +21,10 @@ typedef NS_ENUM(NSInteger, MZListMenuType) {
 
 @interface MZListMenuConfiguration : NSObject
 
-/// menu的背景颜色(默认为0.4white)
+/// menu的背景颜色(默认为0.4whiteColor)
 @property (nonatomic, strong) UIColor *menuViewBackgroundColor;
 
-/// menu的间隔线颜色menu的背景颜色(默认为0.7white)
+/// menu的间隔线颜色menu的背景颜色(默认为0.7whiteColor)
 @property (nonatomic, strong) UIColor *menuViewLineColor;
 
 /// menu的箭头的宽(默认为16.0)
@@ -39,7 +39,7 @@ typedef NS_ENUM(NSInteger, MZListMenuType) {
 /// menu的item的高(默认为45.0)
 @property (nonatomic, assign) CGFloat menuItemHeight;
 
-/// menu的item的文字颜色(默认为white)
+/// menu的item的文字颜色(默认为whiteColor)
 @property (nonatomic, strong) UIColor *menuItemTitleColor;
 
 /// menu的item的文字字体(默认为16.0)
