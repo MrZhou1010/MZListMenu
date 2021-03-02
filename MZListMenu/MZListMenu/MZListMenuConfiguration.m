@@ -26,8 +26,12 @@
 }
 
 + (instancetype)defaultConfiguration {
-    MZListMenuConfiguration *configuration = [[MZListMenuConfiguration alloc] init];
-    return configuration;
+    static MZListMenuConfiguration *_instance;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instance = [[self alloc] init];
+    });
+    return _instance;
 }
 
 @end

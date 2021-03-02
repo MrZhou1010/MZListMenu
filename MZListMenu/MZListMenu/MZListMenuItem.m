@@ -29,7 +29,7 @@
     return self;
 }
 
-#pragma mark - Lazy
+#pragma mark - lazy
 - (UIImageView *)iconImageView {
     if (!_iconImageView) {
         _iconImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:self.iconName]];
@@ -48,7 +48,7 @@
     return _titleLabel;
 }
 
-#pragma mark - Function
+#pragma mark - function
 - (void)updateTitleColor:(UIColor *)color font:(UIFont *)font {
     self.titleLabel.textColor = color;
     self.titleLabel.font = font;

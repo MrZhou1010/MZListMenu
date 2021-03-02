@@ -16,7 +16,7 @@ typedef NS_ENUM(NSInteger, MZListMenuType) {
     MZListMenuTypeRightNavBar,
     MZListMenuTypeLeftNormal,
     MZListMenuTypeMidNormal,
-    MZListMenuTypeRightNormal,
+    MZListMenuTypeRightNormal
 };
 
 @interface MZListMenuConfiguration : NSObject

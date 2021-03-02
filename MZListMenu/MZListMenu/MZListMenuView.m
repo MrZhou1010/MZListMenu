@@ -42,7 +42,7 @@
     return self;
 }
 
-#pragma mark - Lazy
+#pragma mark - lazy
 - (UIView *)contentView {
     if (!_contentView) {
         _contentView = [[UIView alloc] init];
@@ -95,7 +95,7 @@
     }
 }
 
-#pragma mark - 创建Items
+#pragma mark - 创建items
 - (void)setupMenuItems {
     for (UIView *subView in self.contentView.subviews) {
         [subView removeFromSuperview];
@@ -158,7 +158,7 @@
     return highlightedImage;
 }
 
-#pragma mark - Public Function
+#pragma mark - public Function
 - (void)setImages:(NSArray *)imageArr titles:(NSArray *)titleArr configuration:(MZListMenuConfiguration *)configuration isDown:(BOOL)isDown itemClickBlock:(MZListMenuItemClickBlock)block {
     self.imageArr = imageArr;
     self.titleArr = titleArr;

@@ -42,7 +42,7 @@
     return self;
 }
 
-#pragma mark - Lazy
+#pragma mark - lazy
 - (MZListMenuView *)menuView {
     if (!_menuView) {
         _menuView = [[MZListMenuView alloc] initWithFrame:CGRectZero];
@@ -113,8 +113,7 @@
 }
 
 - (void)configRectWithCurrentNav:(UINavigationController *)currentNav count:(NSInteger)count {
-    CGRect statusRect = [[UIApplication sharedApplication] statusBarFrame];
-    CGFloat statusBarHeight = statusRect.size.height;
+    CGFloat statusBarHeight = [self getStatusBarHeight];
     CGFloat navigationBarHeight = currentNav.navigationBar.bounds.size.height;
     CGFloat menuWidth = self.configuration.menuItemWidth;
     CGFloat menuHeight = self.configuration.menuItemHeight * count + self.configuration.menuTriangleHeight;
@@ -135,10 +134,20 @@
     [currentNav.view addSubview:self];
 }
 
+- (CGFloat)getStatusBarHeight {
+    CGFloat statusBarHeight = 0.0;
+    if (@available(iOS 13.0, *)) {
+        UIStatusBarManager *statusBarManager = [UIApplication sharedApplication].windows.lastObject.windowScene.statusBarManager;
+        statusBarHeight = statusBarManager.statusBarFrame.size.height;
+    } else {
+        statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
+    }
+    return statusBarHeight;
+}
+
 - (void)configRectWithView:(UIView *)view count:(NSInteger)count {
     UIView *vcView = [MZListMenu rootViewFromSubView:view];
-    UIView *superView = view.superview;
-    CGRect viewRectFromWindow = [superView convertRect:view.frame toView:vcView];
+    CGRect viewRectFromWindow = [view.superview convertRect:view.frame toView:vcView];
     CGFloat midX = CGRectGetMidX(viewRectFromWindow);
     CGFloat minY = CGRectGetMinY(viewRectFromWindow);
     CGFloat maxY = CGRectGetMaxY(viewRectFromWindow);

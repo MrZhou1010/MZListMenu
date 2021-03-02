@@ -20,7 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationItem.title = @"带三角的弹框选择视图";
     [self setupUI];
 }
 
@@ -38,21 +39,21 @@
     self.navigationItem.rightBarButtonItem = rightItem;
     
     UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn1.frame = CGRectMake(10, 120, 60, 30);
+    btn1.frame = CGRectMake(10.0, 120.0, 60.0, 30.0);
     btn1.tag = 11;
     btn1.backgroundColor = [UIColor redColor];
     [btn1 setTitle:@"view1" forState:UIControlStateNormal];
     [btn1 addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn1];
     UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn2.frame = CGRectMake(175, 120, 60, 30);
+    btn2.frame = CGRectMake(155.0, 120.0, 60.0, 30.0);
     btn2.tag = 11;
     btn2.backgroundColor = [UIColor redColor];
     [btn2 setTitle:@"view2" forState:UIControlStateNormal];
     [btn2 addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn2];
     UIButton *btn3 = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn3.frame = CGRectMake(345, 120, 60, 30);
+    btn3.frame = CGRectMake(305.0, 120.0, 60.0, 30.0);
     btn3.tag = 11;
     btn3.backgroundColor = [UIColor redColor];
     [btn3 setTitle:@"view3" forState:UIControlStateNormal];
@@ -60,7 +61,7 @@
     [self.view addSubview:btn3];
     
     UIButton *btn4 = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn4.frame = CGRectMake(100, 200, 60, 30);
+    btn4.frame = CGRectMake(100.0, 200.0, 60.0, 30.0);
     btn4.tag = 22;
     btn4.backgroundColor = [UIColor redColor];
     [btn4 setTitle:@"cell" forState:UIControlStateNormal];
